@@ -9,7 +9,7 @@
   "publisher": "JICA98",
   "license": "MIT",
   "version": "1.0.1",
-  "icon": "icons/icon.jpg",
+  "icon": "icons/icon.png",
   "engines": {
     "vscode": "^1.66.0"
   },
