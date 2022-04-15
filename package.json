@@ -3,9 +3,13 @@
   "displayName": "jwt-decode",
   "description": "helps you show the contents of jwt token",
   "repository": {
-    
+    "type": "git",
+    "url": "https://github.com/JICA98/jwt-decode"
   },
-  "version": "0.0.1",
+  "publisher": "JICA98",
+  "license": "MIT",
+  "version": "1.0.1",
+  "icon": "icons/icon.jpg",
   "engines": {
     "vscode": "^1.66.0"
   },

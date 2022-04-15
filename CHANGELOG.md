@@ -1,9 +1,11 @@
 # Change Log
 
-All notable changes to the "jwt-decode" extension will be documented in this file.
+## 1.0.1
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
+- Will trim the token before decoding
+- hide the header if not available
+- fixed typos in README.MD
+- Added icon and changelog
+## 1.0.0
 
 - Initial release

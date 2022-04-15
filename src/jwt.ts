@@ -21,12 +21,13 @@ async function captureInput(): Promise<string | undefined> {
 }
 
 export async function decodeToken() {
-    const token = await captureInput();
+    let token = await captureInput();
     let decoded: any = undefined;
     let message: string | undefined = undefined;
     let header: any = undefined;
     if (!!token) {
         try {
+            token = token.trim();
             decoded = jwt_decode(token, { header: false });
             header = jwt_decode(token, { header: true });
         } catch (error) {
@@ -52,6 +53,7 @@ function showDecodedContent(decoded: string, token: string, header: string) {
         vscode.ViewColumn.Beside,
         {}
     );
+    const headerContent = !!header ? `<h4>Header</h4><p>${header}</p>` : '';
     panel.webview.html = `
         <!DOCTYPE html>
         <html lang="en">
@@ -64,9 +66,8 @@ function showDecodedContent(decoded: string, token: string, header: string) {
             <div style='overflow-wrap: break-word;'>
                 <h2>${title}</h2>
                 <h3>Decoded</h3>
-                <p>${decoded}</p>
-                <h4>Header</h4>
-                <p>${header}</p>             
+                <p>${decoded}</p> 
+                ${headerContent}           
                 <br>
                 <hr>
                 <h3>Original token</h3>
