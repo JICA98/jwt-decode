@@ -9,7 +9,10 @@ Use `Command Palette` and search for `Decode JWT Token`
 - View your decoded token along with header and original token.
 
 ## Release Notes
+## 1.0.3
 
+- Added copy option
+- Reduced vscode min requirement version
 ## 1.0.1
 
 - will trim the token before decoding
